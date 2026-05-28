@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+
+        for (int k = 2; k < 31; k++) {
+
+            int sum = (1 << k) - 1;
+
+            if (n % sum == 0) {
+                cout << n / sum << endl;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
