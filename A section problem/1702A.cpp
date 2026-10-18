@@ -7,17 +7,17 @@ int main() {
     cin >> t;
 
     while (t--) {
-        string m;
-        cin >> m;
+        int n;
+        cin >> n;
 
-        int n = stoi(m);
         int round = 1;
 
         while (n / round >= 10) {
             round *= 10;
         }
 
-        cout << n - (n / round) * round << '\n';
+        int ans = n - round * (n / round);
+        cout << ans + (n / round - 1) * round << '\n';
     }
 
     return 0;
